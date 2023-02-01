@@ -1,0 +1,15 @@
+gernder,AGE,hypertension,heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status
+Male,32,0,0,No,Private,Urban,125,45,never smoked
+Female,79,0,1,Yes,Private,Urban,214.0,28,never smoked
+Female,79,0,1,Yes,Private,Urban,214.0,28,never smoked
+Male,33,0,0,No,Govt_jov,Urban,221.0,23.0,formerly smoked
+Male,22,0,0,No,Govt_jov,Urban,222,42,formerly smoked
+Male,30,0,0,Yes,Govt_jov,Urban,200,30,formerly smoked
+Male,33,1,0,Yes,Never_worked,Urban,100,55,formerly smoked
+Male,33,1,0,Yes,Never_worked,Urban,100,55,formerly smoked
+Male,33,1,0,Yes,Never_worked,Urban,100,55,formerly smoked
+Male,33,1,0,Yes,Never_worked,Urban,100,55,formerly smoked
+Male,33,1,0,Yes,Never_worked,Urban,100,55,formerly smoked
+Male,33,0,0,No,Govt_jov,Rural,222,23,formerly smoked
+Other,34,0,0,Yes,Never_worked,Rural,223,23,never smoked
+Male,32,0,0,No,Govt_jov,Rural,223.4,23.4,formerly smoked

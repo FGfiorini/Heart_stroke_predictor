@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<title>Heart Stroke API - Form</title>
+	<meta charset="utf-8" />
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/main.css') }}" />
+	<noscript><link rel="stylesheet" href="{{ url_for('static', filename='style/noscript.css') }}" /></noscript>
+</head>
+         
+  <!-- Header -->
+		<header id="header">
+			<div style = "position:relative; left:40px; top:11px">
+				<span class="image"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo_anyoneai" /></span>
+			</div>
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li>
+						<a href="#">About us</a>
+						<ul>
+							<li><a href="how_we_did.html">How we did it</a></li>
+								<li><a href="backend.html">The backend</a></li>
+								<li>
+									<a href="team.html">The team</a>
+									<ul>
+										<li><a href="team.html #mateo">Mateo</a></li>
+										<li><a href="team.html #maru">Maru</a></li>
+										<li><a href="team.html #franco">Franco</a></li>
+									</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="form.html" class="button primary">Form</a></li>
+				</ul>
+			</nav>
+		</header>
+          <body>              
+              <div class="container">
+                  <div>
+                      <p>
+                          {% with messages = get_flashed_messages() %}
+                          {% if messages %}
+                              <ul>
+                              {% for message in messages %}
+                              <li>{{ message }}</li>
+                              {% endfor %}
+                              </ul>
+                          {% endif %}
+                          {% endwith %}
+                      </p>
+                  </div>
+                            
+                  <div class ="center">
+                      <form action="/" method="post" enctype="multipart/form-data">
+                          
+                          <br><br>   
+                          <h3>Fill the form</h3> 
+
+                          <label>First Name</label>
+                          <input type="text"><br><br>
+
+                          <label>Last Name</label>
+                          <input type="text"><br><br>
+                                      
+
+                          
+                          <label for="gender">gender</label>
+                          <select name="gender" id="gend">
+                              <option value="Male">Male</option>
+                              <option value="Female">Female</option>
+                              <option value="Other">Other</option>           
+                          </select><br><br>
+
+                          <label for="age">age</label>
+                          <div class="number-input">
+                              <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                              <input type="number" name="age" min="0" value="0">
+                              <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                          </div> 
+                          <br><br>
+
+                          <label for="hypertension">hypertension</label>
+                          <select name="hypertension" id="hypertension">
+                              <option value="0">No</option>
+                              <option value="1">Yes</option>                          
+                          </select><br><br>
+
+                          <label for="heart_disease">heart disease</label>
+                          <select name="heart_disease" id="heart_disease">
+                              <option value="0">No</option>
+                              <option value="1">Yes</option>                          
+                          </select><br><br>
+
+                          <label for="ever_married">ever married</label>
+                          <select name="ever_married" id="ever_married">
+                              <option value="Yes">Yes</option>
+                              <option value="No">No</option>
+                          </select><br><br>
+
+                          <label for="work_type">work type</label>
+                          <select name="work_type" id="work_type">
+                              <option value="Govt_jov">Got job</option>
+                              <option value="Never_worked">Never Worked</option>           
+                              <option value="Private">Private</option>   
+                              <option value="Self-employed">Self employed</option>   
+                          </select><br><br>
+                            
+                          <label for="Residence_type">Residence type</label>
+                          <select name="Residence_type" id="Residence_type">
+                              <option value="Rural">Rural</option>
+                              <option value="Urban">Urban</option>
+                          </select><br><br>
+
+                          <label for="avg_glucose_level">average glucose level</label>
+                          <div class="number-input">
+                              <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                              <input type="number" step="0.01" name="avg_glucose_level" id=avg_glucose_level min=0  value="0"><br><br>
+                              <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                          </div> 
+                          <br><br>
+
+                          <label for="bmi">bmi</label>
+                          <div class="number-input">
+                              <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                              <input type="number" step="0.01" name="bmi" id=bmi min=0  value="0"><br><br>
+                              <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                          </div> 
+                          <br><br>
+
+                          <label for="smoking_status">smoking status</label>
+                          <select name="smoking_status" id="smoking_status">
+                              <option value="formerly smoked">formerly smoked</option>
+                              <option value="never smoked">never smoked</option>
+                              <option value="smokes">smokes</option>           
+                              <option value="Unknown">Unknown</option>   
+                          </select><br><br>
+              
+
+                          <button class="button primary">Submit</button>
+
+                        </form>                        
+                  </div> 
+              </div>
+              <br>
+
+          	<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+					<li><a href="https://www.linkedin.com/in/mateobongiorno/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.instagram.com/mmbongiorno/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://github.com/mateobongiorno" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<!-- <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li> -->
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Credit Risk Anyone AI Inc.</li>
+			</footer>		        
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+        <script src="assets/js/button_onclick.js"></script>
+
+	</body>
+</html>
