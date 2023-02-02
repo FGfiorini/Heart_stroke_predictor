@@ -87,10 +87,10 @@ A quick overview on each module:
 # Steps to run all the project:
 
 1. save in data directory, inside model/preprocess/data, your csv or txt file with raw data
-2. create a container - docker image build -t prepro:0.0.1 <path to preprocess folder>
-3. run the container - docker run -v <path to Trainig folder>/pickles:/src/pickles prepro:0.0.1
-4. create the next container - docker image build -t train:0.0.1 <path to Trainig folder>
-5. run the container - docker run -v <path to train test folder>/pickles:/src/pickles train:0.0.1
+2. create a container - docker image build -t prepro:0.0.1 "path-to-preprocess-folder"
+3. run the container - docker run -v "path-to-Training-folder"/pickles:/src/pickles prepro:0.0.1
+4. create the next container - docker image build -t train:0.0.1 "path-to-Training-folder"
+5. run the container - docker run -v "path-to-Training-folder"/pickles:/src/pickles train:0.0.1
 6. run docker-compose.yml file
 7. go to the browser "localhost"
 8. fill the form displayed in frontend and summit to obtain results
