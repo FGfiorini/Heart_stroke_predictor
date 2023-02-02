@@ -78,7 +78,7 @@ input, select, textarea {
 	}
 
 	html, body {
-		background: #f70505;
+		background: #ffffff;
 	}
 
 	body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -107,17 +107,17 @@ input, select, textarea {
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #00ffb3;
+		color: #f01010;
 		text-decoration: none;
 	}
 
 		a:hover {
-			color: #00ffb3 !important;
+			color: #e41919 !important;
 			border-bottom-color: transparent;
 		}
 
 	strong, b {
-		color: #00ffb3;
+		color: #eb0c0c;
 		font-weight: 300;
 	}
 
@@ -130,7 +130,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #00ffb3;
+		color: #f81810;
 		font-weight: 300;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -589,7 +589,7 @@ input, select, textarea {
 			-webkit-animation: overlay-hide 1.5s ease-in forwards !important;
 			-ms-animation: overlay-hide 1.5s ease-in forwards !important;
 			animation: overlay-hide 1.5s ease-in forwards !important;
-			background: #283a62;
+			background: #d2d9e7;
 			content: '';
 			display: block;
 			height: 100%;
@@ -2182,7 +2182,7 @@ input, select, textarea {
 	}
 
 		header.major:after {
-			background: #00ffb3;
+			background: #f10b0b;
 			content: '';
 			display: inline-block;
 			height: 0.2em;
@@ -2207,7 +2207,7 @@ input, select, textarea {
 		}
 
 	label {
-		color: #00ffb3;
+		color: #ff8800;
 		display: block;
 		font-size: 0.9em;
 		font-weight: 300;
@@ -2251,7 +2251,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #00ffb3;
+			border-color: #f5c010;
 		}
 
 	select {

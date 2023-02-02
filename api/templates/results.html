@@ -9,9 +9,7 @@
         
 </head>
 <body>
-    <div class="image-wrapper" >
-        <img alt="AnyoneAi logo" src="https://anyoneai.com/_next/image?url=%2Fimg%2Flogo_with_name.svg&w=256&q=75" decoding="async" data-nimg="intrinsic">
-    </div>
+
     <h1>Heart stroke prediction</h1>
     <div class="result">
         <div>
@@ -20,10 +18,10 @@
 
             {% if context['prediction'] == 1 %}
                 <!-- <img src="approved.jpg"> -->
-                <img src= "{{ url_for('static', filename ='images/not_approved.jpg') }}">
+                <img src= "{{ url_for('static', filename ='images/stroke.jpg') }}">
             
             {% elif context['prediction'] == 0 %}
-                <img src= "{{ url_for('static', filename ='images/approved.jpg') }}">
+                <img src= "{{ url_for('static', filename ='images/healthy.jpg') }}">
             
             {% endif %}
     

@@ -1,6 +1,10 @@
+# Disclaimer
+
+This is a project only for research and academic purposes. The aim of this is just to show how to work and develop an API. If you have any kind of health condition it's mandatory to get medical consultation.
+
 # Flask ML API
 
-A flask API developed with a form in the frontend. Used for a credit risk analysis project where the goal is to predict whether a person is abe to apply for a loan or not, based on data provided through the form. The target value considered is 1 = the person is not able to pay off the credit.
+A flask API developed with a form in the frontend. Used for a Heart stroke prediction analysis project where the goal is to predict whether a person could have possibly a heart stroke or not, based on data provided through the form. The target value considered is 1 = the person have a stroke.
 Its composed by three microservices, that are configured to be excecuted with a docker compose yml file:
 
 - API
@@ -25,16 +29,15 @@ Below is the full project structure:
 │   ├── middleware.py
 │   ├── requirements
 │   └── views.py
-├── images_report
 ├── model
-│   └── preprocess
+│   ├── preprocess
 │   |       ├── data
 |   |       ├── Dockerfile
 |   |       ├── preprocess.py
-│   |       ├── requirements
-│   |       ├── settings.py
-│   |       └── utils.py
-|   ├── train_process
+│   |       └──requirements
+│   |       
+│   |       
+|   ├── Training
 │   |       ├── pickles
 |   |       ├── Dockerfile
 │   |       ├── requirements
@@ -45,16 +48,14 @@ Below is the full project structure:
 │   ├── ml_service.py
 │   ├── preprocess.py
 │   ├── requirements
-│   ├── settings.py
-│   └── utils.py
-├── notebooks
-│   └── EDA.ypinb
-│   ├── Model Evaluation.ypinb
 │   └── settings.py
+│   
+├── notebooks
+│   ├── EDA.ipynb
+│   └── Feature Enguneering and Model Evaluation
 ├── gitignore
 ├── docker-compose.yml
-├── download.py
-├── Model Evaluation reprt.md
+├── Model Evaluation report.md
 └── README.md
 ```
 
@@ -66,7 +67,7 @@ A quick overview on each module:
     - `api/settings.py`: It has all the API settings.
     - `api/templates`: Here we put the .html files used in the frontend.
     - `api/middleware`: It has a function that queues jobs into redis and waits for ML model to get a prediction as answer.
-- images_report: The images used for the final report.
+
 - model: Implements the logic to get jobs from Redis and process them with our Machine Learning model. When we get the predicted value from our model, we must encole it on Redis again so it can be delivered to the user.
     - `model/Trainig/pickles`: Here I saved pickle files that will be rehused in other scripts of the project. 
     - `model/ml_service.py`: Contains functions to get prediction and probability with our ML model, and save the results in redis.
@@ -77,8 +78,7 @@ A quick overview on each module:
     - `data`: Here we saved the raw data to start the project.
 - notebooks: Here we have the notebooks where we started with the project doing the EDA and training models.
     - `notebooks/EDA.ipynb`: Notebook where we made feature engineering.
-    - `notebooks/Model Evaluation.ipynb`: Here we trained some models and got their metrics.
-    - `notebooks/settings.py`:  It has the API settings and some definition of variables.
+    - `notebooks/Feature Engineering and Model Evaluation.ipynb`: Here we trained some models and got their metrics.
 - uploads: Here saves the forms.csv file were all the completed forms data is saved. 
 
 
