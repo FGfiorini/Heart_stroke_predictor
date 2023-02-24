@@ -1,3 +1,11 @@
+# Credits
+
+Front end developed by:
+Leandro Martinez, Github: https://github.com/leandroMz
+Javier Coll, Github: https://github.com/JaviiColl
+
+API developed by Franco J. G. Fiorini
+
 # Disclaimer
 
 This is a project only for research and academic purposes. The aim of this is just to show how I worked and developed an API. If you have any kind of health condition it's mandatory to get medical consultation.
@@ -6,7 +14,7 @@ This is a project only for research and academic purposes. The aim of this is ju
 
 # Flask ML API
 
-A flask API developed with a form in the frontend. Used for a Heart stroke prediction analysis project where the goal is to predict whether a person could have possibly a heart stroke or not, based on data provided through the form. The target value considered is 1 = the person have a stroke (picture with a heart signal). Label =0 (heart with healthy arms)
+A flask API developed with a form in the frontend. Used for a Heart stroke prediction analysis project where the goal is to predict whether a person could have possibly a heart stroke or not, based on data provided through the form. The target value considered is 1, possibly heart stroke. Label = 0, healthy heart. 
 Its composed by three microservices, that are configured to be excecuted with a docker compose yml file:
 
 - API
