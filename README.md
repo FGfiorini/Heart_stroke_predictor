@@ -4,7 +4,7 @@ Front end developed by:
 Leandro Martinez, Github: https://github.com/leandroMz
 Javier Coll, Github: https://github.com/JaviiColl
 
-Main Idea and Data Analysis: Franco J. G. Fiorini
+Main Idea and Data Analysis: Franco J. G. Fiorini,
 API's Arquitecture and design M. Eugenia Urrets and Mateo Buongiorno
 
 # Disclaimer
